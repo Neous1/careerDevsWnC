@@ -1,0 +1,4 @@
+2. it should have a function to display todos
+3. it should have a function to add todos
+4. it should have a function to change todos
+5. it should have a function to delete todos
