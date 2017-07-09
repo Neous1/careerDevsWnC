@@ -39,4 +39,24 @@ todos.splice(3, 3)
 
 
 
-console.log("My Todos: ", todos)
+
+// lesson2 Function 
+
+
+// 2. it should have a function to display todos
+function displayTodos(){
+
+console.log("My Todos: ", todos);
+
+}
+displayTodos();
+
+// 3. it should have a function to add todos
+
+function addTodos(){
+    todos.push("new todo");
+}
+addTodos();
+displayTodos()
+// 4. it should have a function to change todos
+// 5. it should have a function to delete todos
