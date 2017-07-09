@@ -63,7 +63,7 @@ addTodos("hello");
 
 function changeTodo(position, newValue){
     todos[position]=newValue; //position tells the function is targeted for change and newValue is the change
-displayTodos()
+    displayTodos()
 }
 
 
@@ -71,3 +71,11 @@ changeTodo(0, "changed");
 changeTodo(0, "changed again");
 
 // 5. it should have a function to delete todos
+
+function deleteTodo(position){
+    todos.splice(position, 1);
+    displayTodos();
+}
+
+deleteTodo(0);
+deleteTodo(2);
