@@ -60,4 +60,14 @@ function addTodos(todo){
 addTodos("hello");
 
 // 4. it should have a function to change todos
+
+function changeTodo(position, newValue){
+    todos[position]=newValue; //position tells the function is targeted for change and newValue is the change
+displayTodos()
+}
+
+
+changeTodo(0, "changed");
+changeTodo(0, "changed again");
+
 // 5. it should have a function to delete todos
