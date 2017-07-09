@@ -12,3 +12,24 @@ function makeSandwichWithTurkey(){
     Get one slice of bread;
     Add turkey;
     Put slice of bread on top;
+}
+// execute your function by calling it
+
+makeSandwichWithTurkey()
+
+
+// Customizing function
+
+ makeSandwichWith ____
+    Get one slice of bread;
+    Add  ____;
+    Put slice of bread on top;
+
+
+function makeSandwichWith(filling){
+    Get one slice of bread;
+    Add  filling;
+    Put slice of bread on top;
+}
+
+makeSandwichWith('turkey')
