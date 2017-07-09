@@ -7,3 +7,12 @@ var myComputer = {
 }
 console.log(myComputer);
 console.log(myComputer.operatingSystem);
+
+var yvon  = {
+    name: "Yvon",
+    sayName : function(){
+        console.log(this)// keyword this refers to the entire function
+    }
+}
+
+yvon.sayName()
