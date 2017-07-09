@@ -53,10 +53,11 @@ displayTodos();
 
 // 3. it should have a function to add todos
 
-function addTodos(){
-    todos.push("new todo");
+function addTodos(todo){
+    todos.push(todo);
+    displayTodos()
 }
-addTodos();
-displayTodos()
+addTodos("hello");
+
 // 4. it should have a function to change todos
 // 5. it should have a function to delete todos
