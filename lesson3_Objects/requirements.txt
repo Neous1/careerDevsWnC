@@ -1,0 +1,5 @@
+1. it should store the todos array on an object
+2. it should have a displayTodos method 
+3. it should have a addTodo method 
+4. it should have a changeTodo method 
+5. it should have a deleteTodo method 
