@@ -18,7 +18,7 @@ var todoList = {
     todos:[],
     // displayTodos should show .todoText
     displayTodos: function(){
-        console.log("My todos:", this.todos)
+        console.log("My todos:")
         for (var i= 0; i <this.todos.length; i++){
             console.log("displayed Todos:",this.todos[i].todoText)
         }
