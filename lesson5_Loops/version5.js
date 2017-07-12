@@ -10,17 +10,23 @@ for (var i=0; i < testArray.length; i++){
 
 
 
-// displayTodos shoud tell you if .todos is empty
+
 // displayTodos shoud show .completed
 
 
 var todoList = {
     todos:[],
-    // displayTodos should show .todoText
+    
     displayTodos: function(){
-        console.log("My todos:")
-        for (var i= 0; i <this.todos.length; i++){
-            console.log("displayed Todos:",this.todos[i].todoText)
+// displayTodos shoud tell you if .todos is empty        
+        if(this.todos.length === 0){
+            console.log("Your todo list is empty!");
+        }
+        else{ // displayTodos should show .todoText
+            console.log("My todos:")
+            for (var i= 0; i <this.todos.length; i++){
+                console.log("displayed Todos:",this.todos[i].todoText)
+            }
         }
     },
     // todoList.addTodo should add objects
@@ -48,6 +54,14 @@ var todoList = {
         this.displayTodos();
     }
 };
-todoList.displayTodos();
+// todoList.displayTodos();
+// todoList.addTodo('first');
+// todoList.addTodo('second');
+// todoList.deleteTodo(0);
+// todoList.displayTodos();
+// todoList.deleteTodo(1)
+// todoList.displayTodos();
+todoList.displayTodos();// 
 todoList.addTodo('first');
-todoList.addTodo('second');
+todoList.deleteTodo(0)
+todoList.displayTodos()
