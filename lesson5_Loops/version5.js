@@ -1,7 +1,9 @@
 var testArray =['item1', 'item2', 'item3'];
 
-for (var i=0; i < 3; i++){
-    // console.log(i);
+testArray.push("extra item")
+console.log(testArray)
+
+for (var i=0; i < testArray.length; i++){
     console.log(testArray[i]);
 
 }
