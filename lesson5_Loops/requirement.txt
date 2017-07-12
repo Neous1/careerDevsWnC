@@ -1,0 +1,3 @@
+displayTodos should show .todoText
+displayTodos shoud tell you if .todos is empty
+displayTodos shoud show .completed
