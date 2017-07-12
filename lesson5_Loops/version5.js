@@ -1,17 +1,17 @@
 var testArray =['item1', 'item2', 'item3'];
 
 testArray.push("extra item")
-console.log(testArray)
+// console.log(testArray)
 
 for (var i=0; i < testArray.length; i++){
-    console.log(testArray[i]);
+    // console.log(testArray[i]);
 
 }
 
 
 
 
-// displayTodos shoud show .completed
+
 
 
 var todoList = {
@@ -25,7 +25,14 @@ var todoList = {
         else{ // displayTodos should show .todoText
             console.log("My todos:")
             for (var i= 0; i <this.todos.length; i++){
-                console.log("displayed Todos:",this.todos[i].todoText)
+                // console.log("displayed Todos:",this.todos[i].todoText)
+                // displayTodos shoud show .completed
+                if(this.todos[i].completed === true){
+                    console.log("(x)",this.todos[i].todoText)
+                }
+                else{
+                    console.log("( )",this.todos[i].todoText)
+                }
             }
         }
     },
@@ -60,8 +67,23 @@ var todoList = {
 // todoList.deleteTodo(0);
 // todoList.displayTodos();
 // todoList.deleteTodo(1)
-// todoList.displayTodos();
-todoList.displayTodos();// 
-todoList.addTodo('first');
-todoList.deleteTodo(0)
-todoList.displayTodos()
+
+// // todoList.displayTodos();
+// todoList.displayTodos();// 
+// todoList.addTodo('first');
+// todoList.deleteTodo(0)
+// todoList.displayTodos()
+
+todoList.addTodo("testing")
+todoList.addTodo("done")
+todoList.toggleCompleted(1)
+todoList.addTodo("third");
+todoList.addTodo("fourth");
+todoList.addTodo("fifth");
+todoList.toggleCompleted(3)
+todoList.deleteTodo(3,2)
+todoList.deleteTodo(3,1)
+todoList.deleteTodo(2,1)
+todoList.toggleCompleted(1)
+
+
