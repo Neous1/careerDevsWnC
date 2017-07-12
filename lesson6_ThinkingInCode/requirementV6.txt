@@ -1,0 +1,2 @@
+.toggleAll: if everything's true , make evertyg false.
+.toggelAll: Otherwise, make everything true.
