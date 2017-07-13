@@ -76,10 +76,11 @@ var handlers = {
     },
     toggelAll: function(){
         todoList.toggleAll()
+    },
+    addTodo: function(){
+        var addTodoTextInput = document.getElementById("addTodoTextInput");
+        todoList.addTodo(addTodoTextInput.value)
+        addTodoTextInput.value = " ";
+        
     }
 };
-
-
-todoList.displayTodos()
-todoList.addTodo("item3");
-todoList.addTodo("item4");

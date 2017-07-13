@@ -8,9 +8,16 @@
 </head>
 <body>
     <h1>Todo List</h1>
-    
-    <button onclick="handlers.displayTodos()">Display Todos</button>
-    <button onclick="handlers.toggelAll()">Toggle All</button>
+
+    <div>        
+        <button onclick="handlers.displayTodos()">Display Todos</button>
+        <button onclick="handlers.toggelAll()">Toggle All</button> 
+    </div>
+
+    <div>
+        <button type="submit" onclick="handlers.addTodo()">Add</button>
+        <input id="addTodoTextInput" type="text" placeholder="Add a task">
+    </div>
 
     <!--<script src="lesson7_HTML/version7.js"></script>-->
     <script src="lesson8_Inputs/version8.js"></script>
