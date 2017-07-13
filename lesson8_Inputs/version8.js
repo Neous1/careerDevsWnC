@@ -69,13 +69,17 @@ var todoList = {
     }
 
 };
+// handlers will handle different events
+var handlers = {
+    displayTodos: function(){
+        todoList.displayTodos();
+    },
+    toggelAll: function(){
+        todoList.toggleAll()
+    }
+};
 
-var displayTodosButton = document.getElementById('displayTodosButton');
-var toggleAllButton = document.getElementById("toggleAllButton");
 
-displayTodosButton.addEventListener("click", function(){
-    todoList.displayTodos();
-})
-toggleAllButton.addEventListener("click", function(){
-    todoList.toggleAll();
-})
+todoList.displayTodos()
+todoList.addTodo("item3");
+todoList.addTodo("item4");
