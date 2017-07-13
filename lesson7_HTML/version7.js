@@ -70,12 +70,16 @@ var todoList = {
     }
 
 };
-//1. We want to get access to the display todos button.
 
-var displayTodosButton = document.getElementById('displayTodosButton')
+var displayTodosButton = document.getElementById('displayTodosButton');
+var toggleAllButton = document.getElementById("toggleAllButton");
 
-console.log(displayTodosButton);
+displayTodosButton.addEventListener("click", function(){
+    todoList.displayTodos();
+})
+toggleAllButton.addEventListener("click", function(){
+    todoList.toggleAll();
+})
 
-// There should be a "Display todos" and a "Toggle All" button in teh App
-// Clicking Display todos should run todoList.DisplayTodos.
-// Clicking "Toggle All" should run todoList.toggleAll.
+todoList.addTodo("item1");
+todoList.addTodo("item2");
