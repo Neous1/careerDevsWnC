@@ -5,7 +5,6 @@ var todoList = {
             todoText: todoText,
             completed: false
         });
-        this.displayTodos()
     },
     // todoList.changeTodo should change the todoText property
     changeTodo: function(position, todoText){
@@ -42,7 +41,6 @@ var todoList = {
              this.todos[i].completed = true;
             }
         }
-        this.displayTodos();
     }
 
 };
