@@ -108,3 +108,8 @@ var view = {
         return deleteButton;
     }
 };
+var todosUl = document.querySelector('ul');
+//Delete buttons should have access to the todo id
+todosUl.addEventListener("click", function(event){
+    console.log(event.target.parentNode.id)
+})
