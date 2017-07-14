@@ -1,4 +1,0 @@
-it should have working control for .addTodo
-it should have working control for .changeTodo
-it should have working control for .deleteTodo
-it should have working control for .toggleCompleted

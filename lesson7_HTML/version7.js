@@ -1,7 +1,8 @@
 var todoList = {
     todos:[],
     
-    displayTodos: function(){      
+    displayTodos: function(){
+// displayTodos shoud tell you if .todos is empty        
         if(this.todos.length === 0){
             console.log("Your todo list is empty!");
         }
@@ -69,17 +70,12 @@ var todoList = {
     }
 
 };
+//1. We want to get access to the display todos button.
 
-var displayTodosButton = document.getElementById('displayTodosButton');
-var toggleAllButton = document.getElementById("toggleAllButton");
+var displayTodosButton = document.getElementById('displayTodosButton')
 
-displayTodosButton.addEventListener("click", function(){
-    todoList.displayTodos();
-})
-toggleAllButton.addEventListener("click", function(){
-    todoList.toggleAll();
-})
+console.log(displayTodosButton);
 
-todoList.displayTodos()
-todoList.addTodo("item1");
-todoList.addTodo("item2");
+// There should be a "Display todos" and a "Toggle All" button in teh App
+// Clicking Display todos should run todoList.DisplayTodos.
+// Clicking "Toggle All" should run todoList.toggleAll.
