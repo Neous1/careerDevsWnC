@@ -94,8 +94,9 @@ var view = {
             else {
                 todoTextWithCompletion = "( ) " + todo.todoText;
             }
+            todoLi.id = i; //Each li should have an id that has the todo position
             todoLi.textContent = todoTextWithCompletion;
-            todoLi.appendChild(this.createDeleteButton());
+            todoLi.appendChild(this.createDeleteButton());//There should be a delete button for each todo
             todosUl.appendChild(todoLi);
         }
     },
