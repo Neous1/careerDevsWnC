@@ -14,21 +14,24 @@
         <button onclick="handlers.toggelAll()">Toggle All</button> 
     </div>
 
-    <div>
-        <button type="submit" onclick="handlers.addTodo()">Add</button>
+    <div>        
         <input id="addTodoTextInput" type="text" placeholder="Add a task">
+        <button type="submit" onclick="handlers.addTodo()">Add</button>
     </div>
     <div>
-        <button onclick="handlers.changeTodo()">Change Todo</button>
         <input type="number" id="changeTodoPositionInput" placeholder="Select a task number">
         <input type="text" id="changeTodoTextInput" placeholder="Enter new task">
+        <button onclick="handlers.changeTodo()">Change Todo</button>
     </div>
     <div>
-        <button onclick="handlers.deleteTodo()">Delete</button>
         <input type="number" id="deleteTodoPositionInput" placeholder="Select a task number">
+        <button onclick="handlers.deleteTodo()">Delete</button>
+    </div>
+    <div>
+        <input type="number" id="toggleCompletedPositionInput" placeholder="Select a task number">
+        <button onclick="handlers.toggleCompleted()">Toggle Completed</button>
     </div>
 
-    <!--<script src="lesson7_HTML/version7.js"></script>-->
     <script src="lesson8_Inputs/version8.js"></script>
     
 </body>
