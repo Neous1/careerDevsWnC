@@ -78,9 +78,14 @@ var view = {
     displayTodos: function(){
         var todosUl = document.querySelector('ul');
         todosUl.innerHTML="";
-        for(var i = 0; i< todoList.todos.length; i++){
+
+        
+        // this// refers to the view object
+        // forEach(callback, this)
+
+        // forEach takes 2 arguments , 1st arg =todo which is the task to be displayed 2nd arg = position which is the index of task that needs to be checked or unchecked , 
+        todoList.todos.forEach(function(todo, position){
             var todoLi = document.createElement("li");
-            var todo = todoList.todos[i];
             var todoTextWithCompletion = "";
 
             if(todo.completed === true){
@@ -89,11 +94,12 @@ var view = {
             else {
                 todoTextWithCompletion = "( ) " + todo.todoText;
             }
-            todoLi.id = i; //Each li should have an id that has the todo position
+            todoLi.id = position; //Each li should have an id that has the todo position
             todoLi.textContent = todoTextWithCompletion;
             todoLi.appendChild(this.createDeleteButton());//There should be a delete button for each todo
             todosUl.appendChild(todoLi);
-        }
+        
+        }, this);
     },
     // There should be a way to create delte buttons
     createDeleteButton: function(){
