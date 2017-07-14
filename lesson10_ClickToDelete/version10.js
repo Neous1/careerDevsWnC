@@ -98,5 +98,11 @@ var view = {
             todosUl.appendChild(todoLi);
         }
     },
-    
-}
+    // There should be a way to create delte buttons
+    createDeleteButton: function(){
+        var deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
+        deleteButton.className = "deleteButton";
+        return deleteButton;
+    }
+};
