@@ -5,7 +5,6 @@ var todoList = {
             todoText: todoText,
             completed: false
         });
-        this.displayTodos()
     },
     // todoList.changeTodo should change the todoText property
     changeTodo: function(position, todoText){
@@ -42,7 +41,6 @@ var todoList = {
              this.todos[i].completed = true;
             }
         }
-        this.displayTodos();
     }
 
 };
@@ -63,10 +61,8 @@ var handlers = {
         changeTodoTextInput.value = "";
         view.displayTodos();
     },
-    deleteTodo: function(){
-        var deleteTodoPositionInput = document.getElementById("deleteTodoPositionInput");
-        todoList.deleteTodo(deleteTodoPositionInput.valueAsNumber);
-        deleteTodoPositionInput.value = "";
+    deleteTodo: function(position){
+        todoList.deleteTodo(position);
         view.displayTodos();
     }, 
     toggleCompleted: function(){
@@ -96,15 +92,32 @@ var view = {
             else {
                 todoTextWithCompletion = "( ) " + todo.todoText;
             }
+            todoLi.id = i; //Each li should have an id that has the todo position
             todoLi.textContent = todoTextWithCompletion;
+            todoLi.appendChild(this.createDeleteButton());//There should be a delete button for each todo
             todosUl.appendChild(todoLi);
         }
-
     },
+    // There should be a way to create delte buttons
     createDeleteButton: function(){
         var deleteButton = document.createElement("button");
         deleteButton.textContent = "Delete";
         deleteButton.className = "deleteButton";
         return deleteButton;
+    },
+    //Clicking delete should update todoList.todos and the DOM
+    setUpEventListeners: function(){
+        var todosUl = document.querySelector('ul');
+        //Delete buttons should have access to the todo id
+        todosUl.addEventListener("click", function(event){
+            var elementClicked = event.target;
+
+            //check if element clicked is a delete button
+            if(elementClicked.className == "deleteButton"){
+                handlers.deleteTodo(parseInt(elementClicked.parentNode.id));
+            }
+        });
     }
-}
+};
+
+view.setUpEventListeners();
