@@ -4,38 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Watch and Code</title>
 </head>
 <body>
-    <h1>Todo List</h1>
+    <section class="container">
+        <div class="row title">
+            <div class="col-md-12">
+                <h1>Todo List</h1>     
+            </div>
+                       
+        </div>
+        <section class="container">
+            <div class="row">
+                <div class="col-md-12">        
+                    <input id="addTodoTextInput" type="text" placeholder="Add a task">
+                    <button type="submit" onclick="handlers.addTodo()">Add</button>
+                </div>            
+            </div>
+        </section>
 
-    <div>        
-        
-        <button onclick="handlers.toggelAll()">Toggle All</button> 
-    </div>
+        <div>        
+            
+            <button onclick="handlers.toggelAll()">Toggle All</button> 
+        </div>
 
-    <div>        
-        <input id="addTodoTextInput" type="text" placeholder="Add a task">
-        <button type="submit" onclick="handlers.addTodo()">Add</button>
-    </div>
-    <div>
-        <input type="number" id="changeTodoPositionInput" placeholder="Select a task number">
-        <input type="text" id="changeTodoTextInput" placeholder="Enter new task">
-        <button onclick="handlers.changeTodo()">Change Todo</button>
-    </div>
-    <div>
-        <input type="number" id="toggleCompletedPositionInput" placeholder="Select a task number">
-        <button onclick="handlers.toggleCompleted()">Toggle Completed</button>
-    </div>
 
-    <ul>
-        
-    </ul>
+        <div>
+            <input type="number" id="changeTodoPositionInput" placeholder="Select a task number">
+            <input type="text" id="changeTodoTextInput" placeholder="Enter new task">
+            <button onclick="handlers.changeTodo()">Change Todo</button>
+        </div>
+        <div>
+            <input type="number" id="toggleCompletedPositionInput" placeholder="Select a task number">
+            <button onclick="handlers.toggleCompleted()">Toggle Completed</button>
+        </div>
+
+        <ul>
+            
+        </ul>     
+
+
+
+
+    </section>
+
 <!--
     <script src="/lesson9_EscaspeFromTheConsole/version9.js">       
     </script>-->
     <!--<script src="lesson10_ClickToDelete/version10.js"></script>-->
-    <script src="/lesson11_DestroyAllForLoops/version11.js"></script>
+    <script src="index.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.js">
+	</script> 
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+	</script>
     
 </body>
 </html>
